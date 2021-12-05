@@ -25,6 +25,11 @@ namespace Otus_Dictionary
                 return;
             }
 
+            if (key < 0)
+            {
+                key *= -1;
+            }
+
             if (storage[key % capacity] != null)
             {
                 capacity = capacity * 2 + 1;
@@ -49,6 +54,12 @@ namespace Otus_Dictionary
 
         public string Get(int key)
         {
+
+            if (key < 0)
+            {
+                key *= -1;
+            }
+
             if (storage[key % capacity] == null)
             {
                 return $"Объекта с ключом {key} не найдено";

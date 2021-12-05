@@ -30,6 +30,9 @@ namespace Otus_Dictionary
             Console.WriteLine("----------------");
             Console.WriteLine(dictionary[0]);
             Console.WriteLine(dictionary[10]);
+            Console.WriteLine("----------------");
+            dictionary.Add(-18, "Inquisition");
+            Console.WriteLine(dictionary.Get(-18));
 
         }
     }
